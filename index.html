@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Propose Day 💖</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #2b0000, #7a0000);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    animation: fadeIn 2s ease;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.poem {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    display: none;
+}
+
+img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 20px 0;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 14px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+#yes {
+    background: linear-gradient(45deg, #ff4b5c, #ff1e56);
+    color: #fff;
+}
+
+#no {
+    background: #555;
+    color: #fff;
+    position: relative;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Happy Propose Day, Garima ❤️</h1>
+
+    <div class="poem" id="poem">
+        No matter how many times we fight or misunderstand each other,  
+        I will never stop loving you.  
+        Even on the hardest days, my heart still chooses you.  
+        <br><br>
+        I don’t want a perfect love — I want *us*.  
+        I want to spend my today loving you,  
+        my tomorrow building dreams with you,  
+        and my entire life holding your hand.  
+        <br><br>
+        Garima, I choose you. Today. Tomorrow. Forever. 💍
+    </div>
+
+    <img src="garima.jpg" alt="Garima">
+
+    <h2>Will you be mine forever? 💖</h2>
+
+    <div class="buttons">
+        <button id="yes" onclick="yesClicked()">YES ❤️</button>
+        <button id="no" onmouseover="moveNo()">NO 😏</button>
+    </div>
+
+</div>
+
+<script>
+function yesClicked() {
+    document.getElementById("poem").style.display = "block";
+    document.getElementById("yes").innerText = "She Said YES ❤️🥹";
+    document.getElementById("no").style.display = "none";
+}
+
+function moveNo() {
+    const noBtn = document.getElementById("no");
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+}
+</script>
+
+</body>
+</html>
